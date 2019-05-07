@@ -1,0 +1,16 @@
+---
+layout: post
+title: MySQL报错解决方案杂记
+category: 
+tags:
+---
+> Error 1:日志[Warning]: IP address '192.168.0.238' could not be resolved: Temporary failure in name resolution
+
+- 解决方案：在/etc/my.cnf的[mysqld]段中加入：
+
+```
+skip-host-cache
+skip-name-resolve
+```
+
+
